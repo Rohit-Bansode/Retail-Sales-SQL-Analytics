@@ -14,5 +14,23 @@ Use RetailSalesAnalytics
 
 SELECT * FROM superstore;
 
+-- Give Informartion of Table Column
+
 SELECT *
 FROM INFORMATION_SCHEMA.COLUMNS;
+
+--Check Total Rows
+
+SELECT COUNT(*) As TOTAL_ROWS FROM Superstore;
+
+-- Check First 10 Rows
+
+SELECT TOP 10 * FROM Superstore;
+
+-- Check Column Data Types
+
+SELECT COLUMN_NAME, DATA_TYPE 
+FROM INFORMATION_SCHEMA.COLUMNS 
+WHERE TABLE_NAME = 'superstore';
+
+
