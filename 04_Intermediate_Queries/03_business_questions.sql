@@ -6,7 +6,20 @@
 
 USE RetailSalesAnalytics;
 
------------ 1. Top 5 Customer Region By Sales -----------
+
+------------1. Overall Business Performance ------------
+
+SELECT 
+    COUNT(DISTINCT o.Order_ID) AS Total_Orders,
+    COUNT(*) AS Total_Order_Lines,
+    ROUND(SUM(od.Sales), 2) AS Total_Sales,
+    ROUND(SUM(od.Profit), 2) AS Total_Profit,
+    ROUND(SUM(od.Profit) * 100.0 / NULLIF(SUM(od.Sales), 0), 2) AS Profit_Margin_Percentage
+FROM OrderDetails od
+INNER JOIN Orders o ON od.Order_ID = o.Order_ID;
+
+
+----------- 2. Top 5 Customer Region By Sales -----------
 
 WITH RankedCustomers As(
 	SELECT
@@ -23,7 +36,7 @@ SELECT * FROM RankedCustomers
 WHERE rn <=5
 ORDER BY Region,Total_Sales DESC;
 
---- 2. Best Performing Sub-Category in each category
+------------ 2. Best Performing Sub-Category in each category -----------------
 
 WITH SubCategorySales As(
 	SELECT
@@ -38,7 +51,7 @@ WITH SubCategorySales As(
 SELECT * FROM SubCategorySales
 WHERE Rank_In_Category = 1;
 
--- 3. Month-over-Month Sales Growth %
+--------------- 3. Month-over-Month Sales Growth % -----------------------
 
 WITH MonthlySales AS (
 	SELECT
@@ -61,7 +74,7 @@ SELECT
 FROM MonthlySales
 Order By Order_Year,Order_Month;
 
--- 4. Customers who have not ordered in the last 1 year
+-------------- 4. Customers who have not ordered in the last 1 year --------------
 -- (Assuming latest date in data is around 2017)
 
 SELECT
@@ -76,7 +89,7 @@ HAVING MAX(o.Order_Date) < '2017-01-01' OR MAX(o.Order_Date) IS NULL
 ORDER BY Last_Order_Date
 
 
--- 5. Profitability by Segment and Category
+------------------ 5. Profitability by Segment and Category -------------------
 
 SELECT
 	c.segment,
@@ -92,7 +105,7 @@ GROUP BY c.segment,p.category
 ORDER BY c.segment, Total_Profit DESC;
 	
 
--- 6. Running total of profit by year
+----------------- 6. Running total of profit by year ------------------------
 
 SELECT
 	YEAR(o.Order_Date) AS Order_Year,
@@ -102,3 +115,4 @@ FROM OrderDetails od
 INNER JOIN orders o ON od.Order_Id = o.Order_Id
 GROUP BY YEAR(o.Order_Date)
 ORDER BY Order_Year;
+
