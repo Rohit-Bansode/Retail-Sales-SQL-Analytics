@@ -41,7 +41,7 @@ This document summarizes the important business insights obtained from the SQL a
 - High-value customers are clearly identifiable using ranking and segmentation (NTILE).
 - A group of customers have not placed any order recently and are at risk of churn.
 
-![Top 10 Customers](images/05_top_customers.png)
+![Top 10 Customers](images/05_top_10_customers.png)
 
 ![Customer Segmentation](images/06_customer_segments.png)
 
