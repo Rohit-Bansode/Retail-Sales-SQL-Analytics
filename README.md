@@ -2,13 +2,34 @@
 <br>
 
 ## Project Goal: 
-This Project Analyse Superstore dataset and Peforms Some Sql Query Like Data Cleaning, Basic Sql Query, Joins, Aggregatation & Window Function that get Business Insight from That Dataset.
+This project analyzes retail sales data using **Microsoft SQL Server**.  It demonstrates practical use of JOINs, CTEs, Window Functions, and advanced SQL techniques to answer real business questions.    
+
+The dataset used is the classic **Sample Superstore** dataset.
 
 <!--Dataset -->
 ## Dataset: 
 - **Source**: [Kaggle Superstore Dataset](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final)
 - **File Used**: `Sample - Superstore.csv`
-- **Contain**: It Contain Retail Sales Information about Cutomers, Product, Order & Order Details, etc in One Single Csv file.
+- **Contain**: It Contain Retail Sales Information about Cutomers, Products, Orders & Order Details, etc in One Single Csv file.
+
+<!-- Skills Demonstrated -->
+
+## Skills Demonstrated
+- Database Design & Normalization
+- JOINs (INNER, LEFT, Multi-table)
+- Common Table Expressions (CTEs)
+- Window Functions (ROW_NUMBER, RANK, DENSE_RANK, LAG, LEAD, SUM/AVG OVER, NTILE)
+- Aggregations & Business Analysis
+- Data Cleaning
+- Cloud readiness (AWS S3 + RDS)
+
+<!-- Tech Stack -->
+
+## Tech Stack
+- Microsoft SQL Server (SSMS 2022)
+- T-SQL
+- AWS S3 (for dataset storage)
+- AWS RDS (optional cloud database)
 
 <!-- Project Structure --->
 
@@ -47,3 +68,43 @@ Retail-Sales-SQL-Analytics/
 └── Insights/
     └── key_findings.md
 ```
+
+ <!-- Database Schema -->
+ 
+## Database Schema (Normalized)
+- Customers    → Stores Customers Information
+- Products     → Stores Product details
+- Orders       → Stores Order Summary
+- OrderDetails → Stores individual products sold in each order
+
+<!-- How to Set Up Locally -->
+
+## How to Set Up Locally
+1. Create the database using `01_Local_Setup` scripts.
+2. Import the Superstore CSV using Import Flat File.
+3. Run `02_Data_Cleaning/cleaning.sql` to normalize the data.
+4. Practice queries from Beginner and Intermediate folders.
+
+
+<!-- Key Business Questions Answered -->
+
+## Key Business Questions Answered
+- Top customers by region
+- Best performing products and categories
+- Month-over-Month sales growth
+- Customer segmentation
+- Profitability analysis by Segment and Category
+- Customers at risk of churn
+
+<!-- Author Details -->
+
+## Author :
+
+**Name: Rohit Bansode**
+
+<u>Aspiring Data Analyst</u>
+
+- Github : https://github.com/Rohit-Bansode
+- Linkedin : https://www.linkedin.com/in/rohit-bansode-0861b8276
+- Email : rohitbansode924@gmail.com
+
