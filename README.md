@@ -2,7 +2,9 @@
 <br>
 
 ## Project Goal: 
-This project analyzes retail sales data using **Microsoft SQL Server**.  It demonstrates practical use of JOINs, CTEs, Window Functions, and advanced SQL techniques to answer real business questions.    
+This project analyzes retail sales data using **Microsoft SQL Server**.  
+
+It demonstrates practical use of JOINs, CTEs, Window Functions, and advanced SQL techniques to answer real business questions.    
 
 The dataset used is the classic **Sample Superstore** dataset.
 
@@ -10,7 +12,7 @@ The dataset used is the classic **Sample Superstore** dataset.
 ## Dataset: 
 - **Source**: [Kaggle Superstore Dataset](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final)
 - **File Used**: `Sample - Superstore.csv`
-- **Contain**: It Contain Retail Sales Information about Cutomers, Products, Orders & Order Details, etc in One Single Csv file.
+- **Description**: Contains Retail Sales Information about Customers, Products, Orders & Order Details, etc in a Single                       Csv file.
 
 <!-- Skills Demonstrated -->
 
@@ -66,7 +68,19 @@ Retail-Sales-SQL-Analytics/
 │   └── connect_ssms_to_rds.md
 │
 └── Insights/
-    └── key_findings.md
+    ├── key_findings.md
+    └── Images/                  
+        ├── 01_overall_performance.png
+        ├── 02_sales_by_region.png
+        ├── 03_sales_by_category.png
+        ├── 04_best_subcategory.png
+        ├── 05_top_customers.png
+        ├── 06_customer_segments.png
+        ├── 07_churn_customers.png
+        ├── 08_monthly_sales.png
+        └── 09_mom_growth.png
+
+    
 ```
 
  <!-- Database Schema -->
@@ -74,14 +88,14 @@ Retail-Sales-SQL-Analytics/
 ## Database Schema (Normalized)
 - Customers    → Stores Customers Information
 - Products     → Stores Product details
-- Orders       → Stores Order Summary
+- Orders       → Stores Order Summary (one row per order)
 - OrderDetails → Stores individual products sold in each order
 
 <!-- How to Set Up Locally -->
 
 ## How to Set Up Locally
 1. Create the database using `01_Local_Setup` scripts.
-2. Import the Superstore CSV using Import Flat File.
+2. Import the Superstore CSV using **Import Flat File**.
 3. Run `02_Data_Cleaning/cleaning.sql` to normalize the data.
 4. Practice queries from Beginner and Intermediate folders.
 
@@ -100,7 +114,7 @@ Retail-Sales-SQL-Analytics/
 
 ## Author :
 
-**Name: Rohit Bansode**
+**Rohit Bansode**
 
 <u>Aspiring Data Analyst</u>
 
