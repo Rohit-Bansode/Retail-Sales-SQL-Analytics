@@ -2,7 +2,7 @@
 
 This guide explains how the Superstore dataset was uploaded to Amazon S3 for this project.
 
-## Step-by-Step
+## Steps to Upload Dataset in AWS S3 Bucket
 
 ### 1. Create an S3 Bucket
 1. Login to AWS Console → search **S3**
