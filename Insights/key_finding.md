@@ -10,7 +10,7 @@ This document summarizes the important business insights obtained from the SQL a
 - Total Sales and Total Profit were calculated across all orders.
 - The business shows positive overall profit, but margins vary significantly by category and region.
 
-![Overall Sales & Profit](screenshots/01_overall_performance.png)
+![Overall Sales & Profit](images/01_overall_performance.png)
   
 ---
 
@@ -20,7 +20,7 @@ This document summarizes the important business insights obtained from the SQL a
 - Some regions generate good sales but have lower profit margins.
 - Regional performance helps identify where marketing and inventory efforts should be focused.
 
-![Sales by Region](screenshots/02_sales_by_region.png)
+![Sales by Region](images/02_sales_by_region.png)
 
 ---
 
@@ -30,9 +30,9 @@ This document summarizes the important business insights obtained from the SQL a
 - **Furniture** generates high sales but has lower profit margins in some sub-categories.
 - Certain sub-categories are loss-making and need attention (possible over-discounting).
 
-![Sales by Category](screenshots/03_sales_by_category.png)
+![Sales by Category](images/03_sales_by_category.png)
 
-![Best Sub-Category per Category](screenshots/04_best_subcategory.png)
+![Best Sub-Category per Category](images/04_best_subcategory.png)
 
 ---
 
@@ -41,9 +41,9 @@ This document summarizes the important business insights obtained from the SQL a
 - High-value customers are clearly identifiable using ranking and segmentation (NTILE).
 - A group of customers have not placed any order recently and are at risk of churn.
 
-![Top 10 Customers](screenshots/05_top_customers.png)
+![Top 10 Customers](images/05_top_10_customers.png)
 
-![Customer Segmentation](screenshots/06_customer_segments.png)
+![Customer Segmentation](images/06_customer_segments.png)
 
 ---
 
@@ -52,7 +52,7 @@ This document summarizes the important business insights obtained from the SQL a
 - Customers whose last order was before 2017 are considered inactive.
 - These customers can be targeted with re-engagement campaigns (discounts, emails, offers).
 
-![Churn Risk Customers](screenshots/07_churn_customers.png)
+![Churn Risk Customers](images/07_churn_customers.png)
 
 ---
 
@@ -61,9 +61,9 @@ This document summarizes the important business insights obtained from the SQL a
 - Month-over-Month growth is inconsistent — some months show strong growth while others decline.
 - Running total of sales and profit helps track business momentum.
 
-![Monthly Sales Trend](screenshots/08_monthly_sales.png)
+![Monthly Sales Trend](images/08_monthly_sales.png)
 
-![Month-over-Month Growth](screenshots/09_mom_growth.png)
+![Month-over-Month Growth](images/09_mom_growth.png)
 
 ---
 
